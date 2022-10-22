@@ -1,5 +1,4 @@
 from constants import *
-from generalHelperFunctions import *
 import json
 
 #These are the extra functions that help the searchData.py functions.
@@ -64,7 +63,7 @@ def generate_finalMatrix(scaledAdjacentMatrix):   #PS I used the same code in Tu
     newMatrix = scaledAdjacentMatrix[:]
     matrixLength= len(scaledAdjacentMatrix)
     for rowIndex, row in enumerate(scaledAdjacentMatrix):
-        for itemIndex in range(row):
+        for itemIndex in range(len(row)):
             newMatrix[rowIndex][itemIndex]+=(CONST_ALPHA/matrixLength)
     return newMatrix
 

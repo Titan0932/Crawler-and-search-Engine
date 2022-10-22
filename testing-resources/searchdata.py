@@ -2,7 +2,6 @@ import os
 from constants import  CONST_DROPTHRESHOLD
 from  searchDataHelperFunctions import *
 import json
-from searchHelperFunctions import get_url_list
 
 # takes a url and returns the list of urls the url links to
 def get_outgoing_links(linkString):
@@ -100,3 +99,4 @@ def get_page_rank(url):
 # print(get_page_rank('http://people.scs.carleton.ca/~davidmckenney/fruits/N-770.html'))
 
 
+from searchHelperFunctions import get_url_list

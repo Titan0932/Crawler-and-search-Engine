@@ -1,6 +1,6 @@
 
 import testingtools
-import crawler
+# import crawler
 import searchdata
 import search
 
