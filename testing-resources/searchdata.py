@@ -32,7 +32,6 @@ def get_incoming_links(url):
         return None
     return urlList
 
-
 """
 Returns the idf value for the word after reading it from the uniqueWordsIdf.json file
 :param word: the word whose idf we want to calculate

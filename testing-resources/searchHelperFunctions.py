@@ -2,7 +2,6 @@ import os
 from searchdata import get_idf, get_page_rank
 import math
 import json
-
 #These are the extra functions required by the search() function in the search.py file
 
 

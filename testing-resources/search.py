@@ -1,7 +1,7 @@
 import math
 from searchdata import get_tf_idf
 from  searchHelperFunctions import *
-
+import time
 """ 
 :param phrase: string of multiple words seperated by spaces
 :param boost: boolean value that determines if the page's content score should be boosted by the page's pagerank score.
@@ -9,7 +9,8 @@ from  searchHelperFunctions import *
 def search(phrase, boost):
     queryVectorDict= get_query_tfIdf(phrase)
     urlList= get_url_list()    #list of all urls
-    cosine_similarity={}    
+    cosine_similarity={} 
+    start=time.time()
     for url in urlList:
         numerator=0
         leftDenominator=0
@@ -41,6 +42,8 @@ def search(phrase, boost):
         result.append({'url': url, 'title': titles[url].strip(), 'score': scores[url]})
     # print(scores)
     # print(result)
+    end=time.time()
+    print(end-start) 
     return result
 
-search('orange blueberry coconut',False)
+print(search('banana peach tomato tomato pear peach peach',False))

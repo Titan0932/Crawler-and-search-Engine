@@ -4,9 +4,10 @@ from  crawlHelperFunctions import *
 
 # A list that stores the links that are to be crawled/ or is already crawled. The queue keeps on getting filled as new links come in and the links are simultaneously accessed as the loop happens.
 linkQueue = []
-
+import time
 ## CHECK THE README.TXT file for file information
 def crawl(seed):
+    start=time.time()
     uniqueWords = []  #list of all the unique words that are present in all of the urls crawled
     linksAccessed=0   #the counter for the number of links accessed
     clearPrevCrawl()
@@ -24,6 +25,8 @@ def crawl(seed):
         generateIdf(uniqueItem, saveFile=True)
 
     generate_tf_tfIdf(pagesWordsCount, uniqueWords)
+    end=time.time()
+    print(end-start)
     return linksAccessed
 
-# crawl('http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-0.html')
+crawl('http://people.scs.carleton.ca/~davidmckenney/fruits/N-0.html')
