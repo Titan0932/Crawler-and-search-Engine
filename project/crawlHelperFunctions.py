@@ -116,27 +116,29 @@ def generate_tf_tfIdf(pagesWordsCount, uniqueWords):
 
 from searchDataHelperFunctions import *
 
-def generate_pageRank(doc, allUrls, urlIndexMap, urlOutgoings):
-    if (doc) not in allUrls: return -1
+def generate_pageRank(allUrls, urlIndexMap, urlOutgoings):
+    # if (doc) not in allUrls: return -1
     probabilityTransitionMatrix = generate_probabilityTransitionMatrix(urlIndexMap, urlOutgoings)    #Instead of generating adj matrix first and only then the transition matrix, we directly calculate the transition matrix for efficiency.
     scaledAdjacentMatrix = generate_scaled_adjacentMatrix(probabilityTransitionMatrix)
     finalMatrix = generate_finalMatrix(scaledAdjacentMatrix)
+    # print("finalMatrix: ",finalMatrix)
     piVector=[[1] + [0]* (len(urlIndexMap)-1)]   #First item is 1 and all other is 0. There's only 1 row and N columns.
     euclidianDist=1
     while euclidianDist> CONST_DROPTHRESHOLD:
         newVector=mult_matrix(piVector,finalMatrix)
-        prev=piVector
-        euclidianDist= euclidean_dist(prev, newVector)
+        euclidianDist= euclidean_dist(piVector, newVector)
         piVector=newVector
-    link=changeFilenameToLink(doc).replace('.json','')
-    try:
-        pageRank=  piVector[0][urlIndexMap[(link)]]
-    except:
-        return -1
-    pageRank=  piVector[0][urlIndexMap[(link)]]
-    pr_obj={'pageRank': pageRank}
-    with open('pageRank/'+doc, 'w') as file:
-        json.dump(pr_obj,file)
+    for doc in allUrls:
+        link=changeFilenameToLink(doc).replace('.json','')
+        pagerank=[[]]
+        try:
+            pageRank=  piVector[0][urlIndexMap[(link)]]
+        except:
+            return -1
+        # pageRank=  piVector[0][urlIndexMap[(link)]]
+        pr_obj={'pageRank': pageRank}
+        with open('pageRank/'+doc, 'w') as file:
+            json.dump(pr_obj,file)
 
 
 """

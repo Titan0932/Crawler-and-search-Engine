@@ -21,7 +21,7 @@ def crawl(seed):
         pagesWordsCount[url] = {'totalWordNum': 0}
         title, words, links= parseHtml(data, linkQueue, url, pagesWordsCount,uniqueWords)
         addDataToFile(url, words,links,title)
-        dequeue(linkQueue)
+        # dequeue(linkQueue)
         linksAccessed+=1
         urlIndexMap[url]=indexCounter
         indexCounter+=1
@@ -32,8 +32,10 @@ def crawl(seed):
     generate_tf_tfIdf(pagesWordsCount, uniqueWords)
     allUrls=os.listdir('webData')
     
-    for doc in allUrls:
-        generate_pageRank(doc, allUrls, urlIndexMap, urlOutgoings)
-    return linksAccessed
+    # for doc in allUrls:
+    #     generate_pageRank(doc, allUrls, urlIndexMap, urlOutgoings)
+    # return linksAccessed
+    generate_pageRank(allUrls, urlIndexMap, urlOutgoings)
 
-# crawl('http://people.scs.carleton.ca/~davidmckenney/fruits/N-0.html')
+
+# crawl('http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-0.html')

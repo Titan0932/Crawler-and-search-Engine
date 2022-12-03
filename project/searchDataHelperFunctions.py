@@ -24,8 +24,6 @@ It generates a link transition matrix from the given urlIndexMap.
 :param urlIndexMap: A dictionary that maps a URL to an index.
 :param urlOutgoings: A dictionary that maps a url to its outgoing links
 """
-
-
 def generate_probabilityTransitionMatrix(urlIndexMap, urlOutgoings):
     totalPages = len(urlIndexMap)
     adjacencyMatrix = []
@@ -54,14 +52,13 @@ def generate_probabilityTransitionMatrix(urlIndexMap, urlOutgoings):
 It generates a new matrix after scalar multiplication with the generated adj matrix with a factor of (1-Alpha)
 :param probabilityTransitionMatrix: 2-D matrix which already has all the probabilitities mapped for all links
 """
-
-
 # PS I used the same code in Tutorial 4 for scalar multiplication
 def generate_scaled_adjacentMatrix(probabilityTransitionMatrix):
     newMatrix = probabilityTransitionMatrix[:]
     for rowIndex, row in enumerate(probabilityTransitionMatrix):
         for itemIndex, item in enumerate(row):
             newMatrix[rowIndex][itemIndex] = item*(1-CONST_ALPHA)
+
     return newMatrix
 
 
@@ -69,8 +66,6 @@ def generate_scaled_adjacentMatrix(probabilityTransitionMatrix):
 It generates the final matrix after considering the random transport value and adds it to the result of (1-Alpha)*probabilitytransitionMatrix
 :param scaledAdjacentMatrix: result matrix of (1-Alpha)*probabilitytransitionMatrix
 """
-
-
 # PS I used the same code in Tutorial 4 for scalar multiplication
 def generate_finalMatrix(scaledAdjacentMatrix):
     newMatrix = scaledAdjacentMatrix[:]
@@ -85,19 +80,13 @@ def generate_finalMatrix(scaledAdjacentMatrix):
 It multiplies two matrices together.
 :param a,b: matrices to be multiplied
 """
-
-
-# PS I used the same code in Tutorial 4 for matrix multiplication
 def mult_matrix(matrixX, matrixY):
-    resultMatrix = []
-    for rowx in range(len(matrixX)):
-        resultMatrix.append([])
-        for coly in range(len(matrixY[0])):
-            colValue = 0
-            for rowy in range(len(matrixY)):
-                colValue += matrixX[rowx][rowy] * matrixY[rowy][coly]
-            resultMatrix[rowx].append(colValue)
-    # print('donedanadandan')
+    resultMatrix = [[]]
+    for coly in range(len(matrixY[0])):
+        colValue = 0
+        for rowy in range(len(matrixY)):
+            colValue += matrixX[0][rowy] * matrixY[rowy][coly]
+        resultMatrix[0].append(colValue)
     return resultMatrix
 
 

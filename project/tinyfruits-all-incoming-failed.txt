@@ -1,0 +1,60 @@
+Failed Test #11 checking incoming links for URL http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-4.html
+
+expected = ['http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-0.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-3.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-7.html']
+result = None
+
+
+Failed Test #12 checking incoming links for URL http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-0.html
+
+expected = ['http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-3.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-4.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-5.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-6.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-8.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-1.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-2.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-7.html']
+result = None
+
+
+Failed Test #13 checking incoming links for URL http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-8.html
+
+expected = ['http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-0.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-7.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-9.html']
+result = None
+
+
+Failed Test #14 checking incoming links for URL http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-2.html
+
+expected = ['http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-0.html']
+result = None
+
+
+Failed Test #15 checking incoming links for URL http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-1.html
+
+expected = ['http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-0.html']
+result = None
+
+
+Failed Test #16 checking incoming links for URL http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-3.html
+
+expected = ['http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-0.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-4.html']
+result = None
+
+
+Failed Test #17 checking incoming links for URL http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-7.html
+
+expected = ['http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-0.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-4.html', 'http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-8.html']
+result = None
+
+
+Failed Test #18 checking incoming links for URL http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-9.html
+
+expected = ['http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-8.html']
+result = None
+
+
+Failed Test #19 checking incoming links for URL http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-5.html
+
+expected = ['http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-0.html']
+result = None
+
+
+Failed Test #20 checking incoming links for URL http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-6.html
+
+expected = ['http://people.scs.carleton.ca/~davidmckenney/tinyfruits/N-0.html']
+result = None
+
+
